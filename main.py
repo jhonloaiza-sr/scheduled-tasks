@@ -28,7 +28,7 @@ for birthday in month_birthdays:
             letter = letter.replace("[NAME]", name)
             print(letter)
 
-        with smtplib.SMTP("smtp.gmail.com", ) as connection:
+        with smtplib.SMTP("smtp.gmail.com", 587) as connection:
             connection.starttls()  # Cifra el correo
             connection.login(MY_EMAIL, MY_PASSWORD)
             connection.sendmail(
